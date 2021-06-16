@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 export default class SearchBar extends React.Component {
 
     state = { text: ''};
@@ -12,6 +10,8 @@ export default class SearchBar extends React.Component {
 
     onFormSubmit = (event) => {
         event.preventDefault();
+
+        this.props.onSearchSubmit(this.state.text);
     };
 
     render(){
